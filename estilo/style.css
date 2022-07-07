@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte01:Verdana, Geneva, Tahoma, sans-serif;
+    --fontetitulo: 'Passion One', cursive;
+    --fonteconteudo: 'Sriracha', cursive;
+    
+}
+
+/* Essa configuração meche com todos os elementos de maneira geral*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+   
+}
+
+html , body {
+    min-height: 100vh; /* Essa opçao configura o tamanho minimo da view port. da pagina*/
+    background-color: rgba(169, 169, 169, 0.575);
+    font-family: var(--fonte01);
+}
+
+header {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+header > h1 {
+     padding-top: 50px;
+     font-variant: small-caps;
+     font-family: var(--fontetitulo);
+     font-size: 10vw; /* Configuração permite que o texto se adapte aos varios tamanhos de exibiçoes nas telas vw = largura da tela*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a , footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonteconteudo);
+    font-size: 3.8vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+/*Configuraçoes dentro das seçoes com as classes definidas como imagem. */
+section.imagem {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    box-shadow: 15px 15px 20px 2px rgba(0, 0, 0, 0.432);
+    background-attachment: fixed;
+}
+
+/*Esse comando coloca um quadro de uma cor diferente ao paragrafo que esta dentro da div*/
+section.imagem > p {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 10px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url('../imagens/background01.jpg');
+    background-position: center left;
+    background-size: cover;
+}
+
+section#img02 {
+    background-image: url('../imagens/background02.jpg');
+    background-position: center left;
+    background-size: cover;
+}
+
+/* Configuraçoes do rodapé do site*/
+footer {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+
